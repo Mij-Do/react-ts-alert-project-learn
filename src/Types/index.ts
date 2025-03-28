@@ -1,0 +1,1 @@
+export type AlertTypes = 'alert-wrapper' | 'alert-danger';

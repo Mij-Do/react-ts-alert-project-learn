@@ -1,21 +1,29 @@
-$main-color: teal;
+$main-color-wrapper: teal;
+$main-color-danger: #7a0000;
 
-.alert-wrapper {
-    border: 1px solid $main-color;
-    padding: 20px;
-    border-radius: 5px;
-    color: $main-color;
-    transition: 0.5s;
-    &:hover {
-        background-color: $main-color;
-        color: white;
-    }
-    .alert-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        span svg {
-            cursor: pointer;
+
+@mixin alert ($name, $borderColor, $bgColor, $color) {
+    .#{$name} {
+        border: 1px solid $borderColor;
+        padding: 20px;
+        border-radius: 5px;
+        color: $color;
+        margin-bottom: 10px;
+        transition: 0.5s;
+        &:hover {
+            background-color: $bgColor;
+            color: white;
         }
-    }
-} 
+        .alert-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span svg {
+                cursor: pointer;
+            }
+        }
+    } 
+}
+
+@include alert("alert-wrapper", $main-color-wrapper, $main-color-wrapper, $main-color-wrapper);
+@include alert("alert-danger", $main-color-danger, $main-color-danger, $main-color-danger);
