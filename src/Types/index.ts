@@ -1,1 +1,1 @@
-export type AlertTypes = 'alert-wrapper' | 'alert-danger';
+export type AlertTypes = 'alert-wrapper' | 'alert-danger' | 'alert-warning';

@@ -7,10 +7,11 @@ interface IProps {
     title: string;
     icon: ReactNode;
     close: ReactNode;
-    desc: string;
+    desc?: string;
+    children?: ReactNode;
 }
 
-const Alert = ({type, title, icon, close, desc}: IProps) => {
+const Alert = ({type, title, icon, close, desc, children}: IProps) => {
     return (
         <>
             <div className={type}>
@@ -18,7 +19,7 @@ const Alert = ({type, title, icon, close, desc}: IProps) => {
                     <h4>{icon} {title}</h4>
                     <span>{close}</span>
                 </div>
-                <p>{desc}</p>
+                <p>{children ? children : desc}</p>
             </div>
         </>
     )

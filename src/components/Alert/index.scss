@@ -1,5 +1,6 @@
 $main-color-wrapper: teal;
 $main-color-danger: #7a0000;
+$main-color-warning: #a85a00;
 
 
 @mixin alert ($name, $borderColor, $bgColor, $color) {
@@ -27,3 +28,4 @@ $main-color-danger: #7a0000;
 
 @include alert("alert-wrapper", $main-color-wrapper, $main-color-wrapper, $main-color-wrapper);
 @include alert("alert-danger", $main-color-danger, $main-color-danger, $main-color-danger);
+@include alert("alert-warning", $main-color-warning, $main-color-warning, $main-color-warning);
