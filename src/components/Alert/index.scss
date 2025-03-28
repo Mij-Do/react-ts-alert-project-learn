@@ -1,0 +1,21 @@
+$main-color: teal;
+
+.alert-wrapper {
+    border: 1px solid $main-color;
+    padding: 20px;
+    border-radius: 5px;
+    color: $main-color;
+    transition: 0.5s;
+    &:hover {
+        background-color: $main-color;
+        color: white;
+    }
+    .alert-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span svg {
+            cursor: pointer;
+        }
+    }
+} 
